@@ -1,8 +1,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <div id="app">
-    <input type="text" v-on:input="alterarTitulo()">
-    <p>{{ message }}</p>
+    <input type="text" v-model="titulo">
+    <p>{{ titulo }}</p>
 </div>
 
 
@@ -10,11 +10,11 @@
     new Vue({
         el: '#app',
         data: {
-            message: 'Usando VueJS 2!'
+            titulo: 'Usando VueJS 2!'
         },
         mothods: {
             alterarTitulo(event) {
-                this.message = event.target.value
+                this.titulo = event.target.value
             }
         }
     })
